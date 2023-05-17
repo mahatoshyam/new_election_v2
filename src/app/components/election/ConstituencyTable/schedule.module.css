@@ -1,0 +1,183 @@
+.colRightTable ul {
+    display: flex;
+  }
+  .schedule_filter {
+    padding: 20px;
+    background: #f1f1f1;
+    border-top: 1px solid #dddddd;
+  }
+  .schedule_filter .filterHead {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #565656;
+    border-bottom: 1px dotted #707070;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  .schedule_filter .filterHead .heading {
+    color: #e1261c;
+    font-weight: 500;
+  }
+  .schedule_filter .filterHead .Clearfilter {
+    display: flex;
+    align-items: center;
+  }
+  .schedule_filter .filterHead .Clearfilter span {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    position: relative;
+  }
+  .schedule_filter .filterHead .Clearfilter span::before,
+  .schedule_filter .filterHead .Clearfilter span::after {
+    content: "";
+    width: 1px;
+    height: 8px;
+    display: block;
+    background: #565656;
+    position: absolute;
+    left: 6px;
+    top: 3px;
+  }
+  .schedule_filter .filterHead .Clearfilter span::after {
+    transform: rotate(45deg);
+  }
+  .schedule_filter .filterHead .Clearfilter span::before {
+    transform: rotate(-45deg);
+  }
+  .schedule_filter .filterMain .row {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .schedule_filter .filterMain .row:last-child {
+    margin-bottom: 0;
+  }
+  .schedule_filter .filterMain .row .colLeft {
+    margin-right: 30px;
+    flex-shrink: 0;
+    color: #464646;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    background: url(https://images.news18.com/static_news18/pix/ibnhome/news18/state-2021-election/const-arrow.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    background-position: left center;
+    width: 120px;
+  }
+  .schedule_filter .filterMain .row .colRight {
+    width: 100%;
+  }
+  .schedule_filter .filterMain .row .colRight ul {
+    display: flex;
+  }
+  .schedule_filter .filterMain .row .colRight ul li {
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  .schedule_filter .filterMain .row .colRight ul li.active a {
+    background: #001d42;
+    color: #fff;
+    border-color: #001d42;
+    font-weight: 500;
+  }
+  .schedule_filter .filterMain .row .colRight ul li a {
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #e1261c;
+    padding: 4px 14px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #dddddd;
+  }
+  .ConstituencyDrop {
+    position: relative;
+    width: 270px;
+  }
+  .ConstituencyDrop select::-ms-expand {
+    display: none;
+  }
+  .ConstituencyDrop select {
+    -webkit-appearance: none;
+    appearance: none;
+    text-transform: capitalize;
+    display: block;
+    padding: 8px 10px;
+    width: 100%;
+    background-color: #fff;
+    border: 0;
+    cursor: default;
+    box-sizing: border-box;
+    color: #464646 !important;
+    font-size: 13px;
+    border-radius: 5px;
+    padding-right: 20px;
+    box-shadow: 2px 2px 5px #d6d6d6;
+  }
+  .ConstituencyDrop:after {
+    content: "";
+    width: 10px;
+    height: 16px;
+    position: absolute;
+    background: url(https://images.news18.com/static_news18/pix/ibnhome/news18/state-2021-election/dropdown_icon.png);
+    top: 8px;
+    right: 7px;
+    cursor: pointer;
+  }
+  .scheduleMap img {
+    max-width: 100%;
+    width: 40%;
+  }
+  .scheduleMap {
+    width: 100%;
+  }
+  .election_result {
+    margin-top: 20px;
+    border-left: 1px solid rgb(215, 215, 215);
+    border-bottom: 1px solid rgb(215, 215, 215);
+    height: 960px;
+    overflow: auto;
+  }
+  .election_result table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #464646;
+  }
+  .election_result table thead tr th,
+  .election_result table tr td {
+    vertical-align: bottom;
+    border-right: 1px solid rgb(215, 215, 215);
+    font-size: 14px;
+    padding: 5px 10px;
+    text-align: left;
+  }
+  .election_result table thead tr th {
+    font-weight: 500;
+    background: #001d42;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 16px;
+  }
+  .election_result table thead tr th h3 {
+    font-weight: 500;
+  }
+  .election_result table thead tr td {
+    padding: 5px 10px;
+  }
+  .election_result table tbody tr:nth-child(odd) {
+    background: rgb(241, 241, 241);
+  }
+  .election_result table thead {
+    position: sticky;
+    top: 0;
+  }
+
+  .table_heading{
+    background-color: #4646;
+    color: #fff;
+    padding: 10px 0;
+  }
