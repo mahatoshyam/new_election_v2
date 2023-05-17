@@ -1,4 +1,4 @@
-// import './globals.css'
+import './globals.css'
 // import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -14,8 +14,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
-    
       <body>
         {/* <div className="w3-top">
           <div className="w3-bar w3-white w3-padding w3-card" style={{ 'letter-spacing': '4px' }}>

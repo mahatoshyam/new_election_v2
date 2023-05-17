@@ -16,11 +16,6 @@ const CandidateDetail = () => {
         <div className="row">
             <div className="col-3">
                 <h3>heading</h3>
-              
-              
-               <PageDesc/>
-             
-              
             </div>
             <div className="col-6">
                 <h3>center</h3>
@@ -66,10 +61,6 @@ const CandidateDetail = () => {
     </div>
   </div>
 </div>
-                {/* <ResultCard/>
-                <ResultCard/>
-                <ResultCard/>
-                <ResultCard/> */}
                 <Description/>
                 <PhotoVideoSlider/>
                 <CandidateNavigation/>
@@ -77,10 +68,9 @@ const CandidateDetail = () => {
             </div>
             <div className="col-3">
                 <h3>rhs</h3>
-                <CandidateNavigation/>
+                {/* <CandidateNavigation/> */}
                 <CandidateDetailsCard/>
                 <RhsElectionResult/>
-                
             </div>
         </div>
     </div>
