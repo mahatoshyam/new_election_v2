@@ -1,10 +1,18 @@
 import React from "react";
 
-const CandidateCard = () => {
+const CandidateCard = async () => {
+
+  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+  await delay(5000);
+  const api = "http://localhost:9100/dataprovider/redis/key?key=heading";
+  let res = await fetch(api);
+  let data = await res.json();
+  console.log("data1111", data);
+
   return (
     <div>
-      <div class="container">
-        <div class="row">
+      <div className="container">
+        <div className="row">
           <div className="col-2 ">
             <img
               height="50px"
@@ -15,7 +23,7 @@ const CandidateCard = () => {
           </div>
           <div className="col-10">
             <div className="row">
-              <h4>Bharamgouda Alagouda Kage</h4>
+              <h4>{data?.cand_name || "loading"}</h4>
             </div>
             <div className="row">
               <div className="col-6">
