@@ -6,7 +6,7 @@ const RhsElectionResult = () => {
     <div className="row">Result</div>
     <div className="row">input search</div>
     <div className="row">
-    <table class="table">
+    <table className="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -30,7 +30,7 @@ const RhsElectionResult = () => {
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colSpan="2">Larry the Bird</td>
       <td>@twitter</td>
     </tr>
   </tbody>
