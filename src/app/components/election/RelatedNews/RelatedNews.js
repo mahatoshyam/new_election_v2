@@ -1,14 +1,29 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const RelatedNews = async () => {
 
+  const [data1, setData] = useState([]);
+
   const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-  await delay(15000);
-  const api1 = "http://localhost:9100/dataprovider/redis/key?key=related-news";
-  let res1 = await fetch(api1);
-  let data1 = await res1.json();
-  console.log("data123", data1);
+  useEffect(() => {
+    delay(15000).then(async() => {
+      const api1 = "http://localhost:9100/dataprovider/redis/key?key=related-news";
+      let res1 = await fetch(api1);
+      let data1 = await res1.json();
+      setData(data1);
+      console.log("dataeff", data1);
+    }
+
+    );
+  }, [])
+  
+  // const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+  // await delay(15000);
+  // const api1 = "http://localhost:9100/dataprovider/redis/key?key=related-news";
+  // let res1 = await fetch(api1);
+  // let data1 = await res1.json();
+  // console.log("data123", data1);
 
   return (
     <div>
