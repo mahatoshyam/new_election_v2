@@ -1,6 +1,14 @@
 import React from "react";
 
-const CandidateDetailsCard = () => {
+const CandidateDetailsCard = async () => {
+  // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  // await delay(5000);
+  // const api1 =
+  //   "http://localhost/api/candidate-details/candidate-details/cand-details.json";
+  // let res1 = await fetch(api1);
+  // let data1 = await res1.json();
+  // console.log("da", data1);
+
   return (
     <div className="container">
       <div className="row">Candidate Name</div>

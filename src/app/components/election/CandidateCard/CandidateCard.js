@@ -1,10 +1,12 @@
 import React from "react";
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const CandidateCard = async () => {
-
-  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   await delay(5000);
-  const api = "http://localhost:9100/dataprovider/redis/key?key=heading";
+  // const api = "http://localhost:9100/dataprovider/redis/key?key=heading";
+  const api =
+    "http://localhost/api/candidate-details/candidate-details/heading.json";
   let res = await fetch(api);
   let data = await res.json();
   console.log("data1111", data);
@@ -23,11 +25,13 @@ const CandidateCard = async () => {
           </div>
           <div className="col-10">
             <div className="row">
-              <h4>{data?.cand_name || "loading"}</h4>
+              <h4>{data?.cand_name || <Skeleton />}</h4>
             </div>
             <div className="row">
               <div className="col-6">
-                <p>Party | Const | State </p>
+                <p>
+                  {data?.party_abbr} | {data?.state}{" "}
+                </p>
               </div>
               <div className="col-6">
                 <p>Follow Party here</p>

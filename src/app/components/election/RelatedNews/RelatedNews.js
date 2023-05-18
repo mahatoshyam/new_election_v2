@@ -1,79 +1,65 @@
-'use client'
-import React from "react";
+"use client";
+import jsonp from "jsonp";
+// import fetchAPI from "@/util/fetchAPI";
+import React, { useState } from "react";
 
 const RelatedNews = async () => {
+  const [data1, setData] = useState(false);
 
-  const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-  await delay(15000);
-  const api1 = "http://localhost:9100/dataprovider/redis/key?key=related-news";
-  let res1 = await fetch(api1);
-  let data1 = await res1.json();
-  console.log("data123", data1);
+  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  React.useEffect(() => {
+    delay(5000).then(async () => {
+      jsonp(
+        "http://localhost/api/candidate-details/candidate-details/related-news.json",
+        { name: "data" },
+        (error, data) => {
+          if (error) {
+            console.log("eerrr", error);
+            setData(false);
+          } else {
+            console.log("dtaaa", data);
+            setData(data);
+          }
+        }
+      );
+    });
+  }, []);
 
+  // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  // await delay(10000);
+  // const api1 =
+  //   "http://localhost/api/candidate-details/candidate-details/related-news.json";
+  // let res1 = await fetch(api1);
+  // let data1 = await res1.json();
+  // console.log("data12", data1);
   return (
     <div>
       <h1>Related News</h1>
       <div className="row">
-        <div className="col-4">
-          <div className="card" >
-            <img
-              height="100px"
-              width="150px"
-              src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                the bulk of the card's content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="card">
-            <img
-              height="100px"
-              width="150px"
-              src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                the bulk of the card's content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
-          <div className="card" >
-            <img
-              height="100px"
-              width="150px"
-              src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                the bulk of the card's content.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-        </div>
+        {data1?.related_news?.map((item, id) => {
+          return (
+            <>
+              <div className="col-4" key={id}>
+                <div className="card">
+                  <img
+                    height="100px"
+                    width="150px"
+                    src={item.img}
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{item.title}</h5>
+                    <p className="card-text">{item.date}</p>
+                    <a href="#" className="btn btn-primary">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </>
+          );
+        })}
       </div>
     </div>
   );
