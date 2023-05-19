@@ -1,15 +1,16 @@
+import Image from "next/image";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 const CandidateCard = async () => {
-  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  await delay(5000);
+  // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  // await delay(5000);
   // const api = "http://localhost:9100/dataprovider/redis/key?key=heading";
   const api =
     "http://localhost/api/candidate-details/candidate-details/heading.json";
   let res = await fetch(api);
   let data = await res.json();
-  console.log("data1111", data);
+  // console.log("data1111", data);
 
   return (
     <div>

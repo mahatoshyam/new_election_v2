@@ -1,15 +1,15 @@
 import React, { Suspense } from "react";
-import Description from "../app/components/election/Description/Description";
-import RhsElectionResult from "../app/components/election/RhsElectionResult/RhsElectionResult";
-import NewsRanking from "../app/components/election/NewsRanking/NewsRanking";
-import ResultCard from "../app/components/election/ResultCard/ResultCard";
-import PageDesc from "../app/components/election/PageDesc/PageDesc";
-import CandidateCard from "../app/components/election/CandidateCard/CandidateCard";
-import CandidateNavigation from "../app/components/election/CandidateNavigation/CandidateNavigation";
-import PhotoVideoSlider from "../app/components/election/PhotoVideoSlider/PhotoVideoSlider";
-import RelatedNews from "../app/components/election/RelatedNews/RelatedNews";
-import CandidateDetailsCard from "../app/components/election/CandidateDetailsCard/CandidateDetailsCard";
-import Pastresultlist from "../app/components/election/PastResultList/Pastresultlist";
+import Description from "../components/election/Description/Description";
+import RhsElectionResult from "../components/election/RhsElectionResult/RhsElectionResult";
+import NewsRanking from "../components/election/NewsRanking/NewsRanking";
+import ResultCard from "../components/election/ResultCard/ResultCard";
+import PageDesc from "../components/election/PageDesc/PageDesc";
+import CandidateCard from "../components/election/CandidateCard/CandidateCard";
+import CandidateNavigation from "../components/election/CandidateNavigation/CandidateNavigation";
+import PhotoVideoSlider from "../components/election/PhotoVideoSlider/PhotoVideoSlider";
+import RelatedNews from "../components/election/RelatedNews/RelatedNews";
+import CandidateDetailsCard from "../components/election/CandidateDetailsCard/CandidateDetailsCard";
+import Pastresultlist from "../components/election/PastResultList/Pastresultlist";
 import Skeleton from "react-loading-skeleton";
 
 const CandidateDetail = () => {
@@ -61,7 +61,15 @@ const CandidateDetail = () => {
           <h3>rhs</h3>
           {/* <CandidateNavigation/> */}
           <CandidateDetailsCard />
-          <RhsElectionResult />
+          <Suspense
+            fallback={
+              <>
+                <Skeleton />
+              </>
+            }
+          >
+            <RhsElectionResult />
+          </Suspense>
         </div>
       </div>
     </div>

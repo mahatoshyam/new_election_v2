@@ -6,23 +6,22 @@ import React, { useState } from "react";
 const RelatedNews = async () => {
   const [data1, setData] = useState(false);
 
-  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   React.useEffect(() => {
-    delay(5000).then(async () => {
-      jsonp(
-        "http://localhost/api/candidate-details/candidate-details/related-news.json",
-        { name: "data" },
-        (error, data) => {
-          if (error) {
-            console.log("eerrr", error);
-            setData(false);
-          } else {
-            console.log("dtaaa", data);
-            setData(data);
-          }
+    // delay(1000).then(async () => {
+    jsonp(
+      "http://localhost/api/candidate-details/candidate-details/related-news.json",
+      { name: "data" },
+      (error, data) => {
+        if (error) {
+          console.log("eerrr", error);
+          setData(false);
+        } else {
+          console.log("dtaaa", data);
+          setData(data);
         }
-      );
-    });
+      }
+    );
   }, []);
 
   // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

@@ -1,7 +1,9 @@
 "use client";
+import jsonp from "jsonp";
 import React, { useState } from "react";
+import Skeleton from "react-loading-skeleton";
 
-const ResultCard = async ({ delay, apiurl }) => {
+const ResultCard = async ({ apiurl }) => {
   // const delay1 = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   // console.log("aappp", apiurl, "dee", delay);
   // await delay1(delay);
@@ -13,19 +15,19 @@ const ResultCard = async ({ delay, apiurl }) => {
 
   const [data1, setData] = useState(false);
 
-  const delaytime = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  // const delaytime = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   React.useEffect(() => {
-    delaytime(delay).then(async () => {
-      jsonp(apiurl, { name: "data" }, (error, data) => {
-        if (error) {
-          console.log("eerrr", error);
-          setData(false);
-        } else {
-          console.log("dtaaa", data);
-          setData(data);
-        }
-      });
+    // delaytime(delay).then(async () => {
+    jsonp(apiurl, { name: "data" }, (error, data) => {
+      if (error) {
+        console.log("eerrr", error);
+        setData(false);
+      } else {
+        console.log("dtaaa", data);
+        setData(data);
+      }
     });
+    // });
   }, []);
   return (
     <>
@@ -40,18 +42,18 @@ const ResultCard = async ({ delay, apiurl }) => {
           </tr>
         </thead>
         <tbody>
-          {data1?.past_results?.data?.map((item) => {
+          {data1?.past_results?.data?.map((item, id) => {
             {
               console.log("aass1122", item);
             }
             return (
               <>
-                <tr>
-                  <th scope="row">{item.party_abbr || "not found"}</th>
-                  <td>{item.votes_polled}</td>
-                  <td>{item.votes_percentage}</td>
-                  <td>{item.cand_name}</td>
-                  <td>{item.margin}</td>
+                <tr key={id}>
+                  <th scope="row">{item.party_abbr || <Skeleton />}</th>
+                  <td>{item.votes_polled || <Skeleton />}</td>
+                  <td>{item.votes_percentage || <Skeleton />}</td>
+                  <td>{item.cand_name || <Skeleton />}</td>
+                  <td>{item.margin || <Skeleton />}</td>
                 </tr>
               </>
             );

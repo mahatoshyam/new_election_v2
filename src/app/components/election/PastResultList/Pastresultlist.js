@@ -27,9 +27,9 @@ function Pastresultlist() {
               <Suspense fallback={<p>Loading Past Result 2023...</p>}>
                 <ResultCard
                   key={"2023"}
-                  delay={20000}
+                  // delay={1000}
                   apiurl={
-                    "http://localhost/api/candidate-details/candidate-details/%7bstg%7dae_en_2023_s10_past_result.json"
+                    "http://192.168.2.123/api/candidate-details/candidate-details/%7bstg%7dae_en_2023_s10_past_result.json"
                   }
                 />
               </Suspense>
@@ -58,7 +58,7 @@ function Pastresultlist() {
               <Suspense fallback={<p>Loading Past Result 2023...</p>}>
                 <ResultCard
                   key={"2018"}
-                  delay={15000}
+                  // delay={1000}
                   apiurl={
                     "http://localhost/api/candidate-details/candidate-details/%7bstg%7dae_en_2018_s10_past_result.json"
                   }
@@ -89,7 +89,7 @@ function Pastresultlist() {
               <Suspense fallback={<p>Loading Past Result 2023...</p>}>
                 <ResultCard
                   key={"2013"}
-                  delay={10000}
+                  // delay={1000}
                   apiurl={
                     "http://localhost/api/candidate-details/candidate-details/%7bstg%7dae_en_2013_s10_past_result.json"
                   }
