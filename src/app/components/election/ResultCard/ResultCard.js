@@ -1,4 +1,5 @@
 "use client";
+import jsonp from "jsonp";
 import React, { useState } from "react";
 
 const ResultCard = async ({ delay, apiurl }) => {

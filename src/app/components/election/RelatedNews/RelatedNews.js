@@ -10,7 +10,7 @@ const RelatedNews = async () => {
   React.useEffect(() => {
     delay(5000).then(async () => {
       jsonp(
-        "http://localhost/api/candidate-details/candidate-details/related-news.json",
+        "http://192.168.2.123/api/candidate-details/candidate-details/related-news.json",
         { name: "data" },
         (error, data) => {
           if (error) {
