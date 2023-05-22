@@ -5,7 +5,7 @@ import Graphics from "./components/election/Graphics/Graphics";
 import Link from "next/link";
 // import Serversidecomp from 'npm_component1/component/serversidecomp';
 // import Clientsidecomp from 'npm_component1/component/clientsidecomp';
-
+import { Tweet } from "react-tweet";
 export default async function Home() {
   return (
     <>
@@ -15,6 +15,7 @@ export default async function Home() {
       <Link href="/schedule">Click for serverside </Link>
       <br></br>
       <Link href="/candidatedetails">Click for candidatedetails </Link>
+      {/* <Tweet id="1660507911880327174" />; */}
     </>
   );
 }

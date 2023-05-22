@@ -6,11 +6,16 @@ const CandidateCard = async () => {
   // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   // await delay(5000);
   // const api = "http://localhost:9100/dataprovider/redis/key?key=heading";
-  const api =
-    "http://localhost/api/candidate-details/candidate-details/heading.json";
-  let res = await fetch(api);
-  let data = await res.json();
-  // console.log("data1111", data);
+  // const api =
+  //   "http://localhost/api/candidate-details/candidate-details/heading.json";
+  // let res = await fetch(api);
+  // let data = await res.json();
+  const res = await fetch(
+    "http://localhost/api/candidate-details/candidate-details/heading.json",
+    { next: { revalidate: 10 } }
+  );
+  const data = await res.json();
+  console.log("dataa", data);
 
   return (
     <div>

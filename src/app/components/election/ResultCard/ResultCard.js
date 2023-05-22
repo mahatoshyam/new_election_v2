@@ -23,7 +23,7 @@ const ResultCard = async ({ apiurl }) => {
         console.log("eerrr", error);
         setData(false);
       } else {
-        console.log("dtaaa", data);
+        console.log("resultcard", data);
         setData(data);
       }
     });
