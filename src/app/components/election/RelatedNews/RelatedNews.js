@@ -7,21 +7,25 @@ const RelatedNews = async () => {
   const [data, setData] = useState({});
 
   // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  React.useEffect(() => {
+  React.useEffect( async () => {
+    let res = await fetch("http://localhost:3000/api/candidate-details/related-news.json");
+    res = await res.json();
+    setData(res);
+    
     // delay(1000).then(async () => {
-    jsonp(
-      "http://localhost/api/candidate-details/candidate-details/related-news.json",
-      { name: "data" },
-      (error, data) => {
-        if (error) {
-          console.log("eerrr", error);
-          setData(false);
-        } else {
-          console.log("dtaaa", data);
-          setData(data);
-        }
-      }
-    );
+    // jsonp(
+    //   "http://localhost:3000/api/candidate-details/related-news.json",
+    //   { name: "data" },
+    //   (error, data) => {
+    //     if (error) {
+    //       console.log("eerrr", error);
+    //       setData(false);
+    //     } else {
+    //       console.log("dtaaa", data);
+    //       setData(data);
+    //     }
+    //   }
+    // );
   }, []);
 
   // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

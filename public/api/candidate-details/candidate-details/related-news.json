@@ -1,0 +1,19 @@
+data({
+  "related_news": [
+    {
+      "img": "https://www.news18.com/election_framework_next/_next/image/?url=https%3A%2F%2Fimages.news18.com%2Fibnlive%2Fuploads%2F2023%2F05%2F1684308071_00ae6386-900f-4151-8280-ca008e18c671-16843080723x2.jpeg%3Fim%3DResize%2Cwidth%3D229%2Caspect%3Dfit%2Ctype%3Dnormal&w=256&q=75",
+      "date": "May 17, 2023",
+      "title": " Test ser2 Karnataka News | Siddaramaiah To Be The CM First And DK Shivakumar To Be The DY CM | English News"
+    },
+    {
+      "img": "https://www.news18.com/election_framework_next/_next/image/?url=https%3A%2F%2Fimages.news18.com%2Fibnlive%2Fuploads%2F2023%2F05%2F1684308071_00ae6386-900f-4151-8280-ca008e18c671-16843080723x2.jpeg%3Fim%3DResize%2Cwidth%3D229%2Caspect%3Dfit%2Ctype%3Dnormal&w=256&q=75",
+      "date": "May 17, 2023",
+      "title": "Karnataka News | Siddaramaiah To Be The CM First And DK Shivakumar To Be The DY CM | English News"
+    },
+    {
+      "img": "https://www.news18.com/election_framework_next/_next/image/?url=https%3A%2F%2Fimages.news18.com%2Fibnlive%2Fuploads%2F2023%2F05%2F1684308071_00ae6386-900f-4151-8280-ca008e18c671-16843080723x2.jpeg%3Fim%3DResize%2Cwidth%3D229%2Caspect%3Dfit%2Ctype%3Dnormal&w=256&q=75",
+      "date": "May 17, 2023",
+      "title": "Karnataka News | Siddaramaiah To Be The CM First And DK Shivakumar To Be The DY CM | English News"
+    }
+  ]
+})

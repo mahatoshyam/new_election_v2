@@ -11,7 +11,7 @@ const CandidateCard = async () => {
   // let res = await fetch(api);
   // let data = await res.json();
   const res = await fetch(
-    "http://localhost/api/candidate-details/candidate-details/heading.json",
+    "http://localhost:3000/api/candidate-details/heading.json",
     { next: { revalidate: 10 } }
   );
   const data = await res.json();

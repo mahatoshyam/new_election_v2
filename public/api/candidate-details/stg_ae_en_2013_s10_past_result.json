@@ -1,0 +1,35 @@
+{
+  "past_results": {
+    "year": "2013",
+    "data": [
+      {
+        "party_abbr": "BJP",
+        "party_color": "orange",
+        "votes_polled": "1000",
+        "votes_percentage": "40%",
+        "cand_name": "Ganesh Prakash Hukkeri",
+        "margin": "1,256 (18.27%)",
+        "winner": true,
+        "graduate": true,
+        "criminal_case": true,
+        "deposit_forfeited": true,
+        "more_than_1_cr": true
+      },
+      {
+        "party_abbr": "BSP",
+        "party_color": "blue",
+        "votes_polled": "1000",
+        "votes_percentage": "10%",
+        "cand_name": "Arjun Bandu Mane",
+        "margin": "1,256 (18.27%)",
+        "winner": true,
+        "graduate": true,
+        "criminal_case": true,
+        "deposit_forfeited": true,
+        "more_than_1_cr": true
+      }
+    ],
+    "is_live": false,
+    "dynamic_url": ""
+  }
+}

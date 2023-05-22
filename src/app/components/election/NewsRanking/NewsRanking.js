@@ -4,8 +4,7 @@ const NewsRanking = async () => {
   // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   // await delay(5000);
   // const api1 = "http://localhost:9100/dataprovider/redis/key?key=related-news";
-  const api1 =
-    "http://localhost/api/candidate-details/candidate-details/slider.json";
+  const api1 = "http://localhost:3000/api/candidate-details/slider.json";
   let res1 = await fetch(api1);
   let data = await res1.json();
   // console.log("data123", data);

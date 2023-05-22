@@ -3,10 +3,9 @@ import React from "react";
 const RhsElectionResult = async () => {
   // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   // await delay(10000);
-  // const api1 =
-  //   "http://localhost/api/candidate-details/candidate-details/%7Bstg%7Dae_en_2023_s10_rhs_result.json";
-  // let res1 = await fetch(api1);
-  // let data1 = await res1.json();
+  const api = "http://localhost:3000/api/candidate-details/cons-result.json";
+  let res = await fetch(api);
+  let data = await res.json();
   // console.log("data1211", data1);
 
   return (
@@ -28,23 +27,17 @@ const RhsElectionResult = async () => {
               console.log("resss", conname);
               return <>Hello</>;
             })} */}
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+            {data?.cons_results?.map( (row, index) => (
+              <tr>
+              <th scope="row">{index + 1}</th>
+              <td>{row.cons_name}</td>
+              <td>{row['2006']}</td>
+              <td>{row['2011']}</td>
+              <td>{row['2016']}</td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            ))}
+            
+            
           </tbody>
         </table>
       </div>

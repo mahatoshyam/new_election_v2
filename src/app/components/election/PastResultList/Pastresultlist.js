@@ -28,9 +28,7 @@ function Pastresultlist() {
                 <ResultCard
                   key={"2023"}
                   // delay={1000}
-                  apiurl={
-                    "http://192.168.2.123/api/candidate-details/candidate-details/%7bstg%7dae_en_2023_s10_past_result.json"
-                  }
+                  apiurl={"http://localhost:3000/api/candidate-details/stg_ae_en_2023_s10_past_result.json"}
                 />
               </Suspense>
             </div>
@@ -59,9 +57,7 @@ function Pastresultlist() {
                 <ResultCard
                   key={"2018"}
                   // delay={1000}
-                  apiurl={
-                    "http://localhost/api/candidate-details/candidate-details/%7bstg%7dae_en_2018_s10_past_result.json"
-                  }
+                  apiurl={"http://localhost:3000/api/candidate-details/stg_ae_en_2018_s10_past_result.json"}
                 />
               </Suspense>
             </div>
@@ -90,9 +86,7 @@ function Pastresultlist() {
                 <ResultCard
                   key={"2013"}
                   // delay={1000}
-                  apiurl={
-                    "http://localhost/api/candidate-details/candidate-details/%7bstg%7dae_en_2013_s10_past_result.json"
-                  }
+                  apiurl={"http://localhost:3000/api/candidate-details/stg_ae_en_2013_s10_past_result.json"}
                 />
               </Suspense>
             </div>

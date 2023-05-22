@@ -3,7 +3,8 @@ import jsonp from "jsonp";
 import React, { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 
-const ResultCard = async ({ apiurl }) => {
+const ResultCard = async (props) => {
+  const apiurl = props.apiurl
   // const delay1 = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   // console.log("aappp", apiurl, "dee", delay);
   // await delay1(delay);
@@ -13,20 +14,25 @@ const ResultCard = async ({ apiurl }) => {
   // let data = await res1.json();
   // console.log("resutdata1new", data);
 
-  const [data1, setData] = useState(false);
+  const [data, setData] = useState({});
 
   // const delaytime = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  React.useEffect(() => {
+  React.useEffect(async () => {
+    let res1 = await fetch(apiurl, { next: { revalidate: 10 } });
+    let data1 = await res1.json();
+    setData(data1);
+    console.log(data1);
     // delaytime(delay).then(async () => {
-    jsonp(apiurl, { name: "data" }, (error, data) => {
-      if (error) {
-        console.log("eerrr", error);
-        setData(false);
-      } else {
-        console.log("resultcard", data);
-        setData(data);
-      }
-    });
+    // jsonp(apiurl, { name: "data" }, (error, data) => {
+    //   if (error) {
+    //     console.log("eerrr", error);
+    //     setData({});
+    //   } else {
+    //     console.log("resultcard", data);
+    //     setData(data);
+    //   }
+    //   console.log(data);
+    // });
     // });
   }, []);
   return (
@@ -42,7 +48,7 @@ const ResultCard = async ({ apiurl }) => {
           </tr>
         </thead>
         <tbody>
-          {data1?.past_results?.data?.map((item, id) => {
+          {data?.past_results?.data?.map((item, id) => {
             {
               console.log("aass1122", item);
             }

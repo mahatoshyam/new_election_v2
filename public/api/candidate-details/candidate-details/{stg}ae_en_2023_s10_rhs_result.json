@@ -1,0 +1,64 @@
+data({
+  "karnataka": {
+    "S10A001": {
+      "CONS_NAME": "Nippani",
+      "WINNER_2018": "BJP",
+      "WINNER_2013": "BJP",
+      "WINNER_2008": "INC"
+    },
+    "S10A002": {
+      "CONS_NAME": "Chikkodi-Sadalga",
+      "WINNER_2018": "INC",
+      "WINNER_2013": "INC",
+      "WINNER_2008": "INC"
+    },
+    "S10A003": {
+      "CONS_NAME": "Athani",
+      "WINNER_2018": "INC",
+      "WINNER_2013": "BJP",
+      "WINNER_2008": "BJP"
+    },
+    "S10A004": {
+      "CONS_NAME": "Kagwad",
+      "WINNER_2018": "INC",
+      "WINNER_2013": "BJP",
+      "WINNER_2008": "BJP"
+    },
+    "S10A005": {
+      "CONS_NAME": "Kudachi",
+      "WINNER_2018": "BJP",
+      "WINNER_2013": "BSRCP",
+      "WINNER_2008": "INC"
+    },
+    "S10A006": {
+      "CONS_NAME": "Raybag",
+      "WINNER_2018": "BJP",
+      "WINNER_2013": "BJP",
+      "WINNER_2008": "BJP"
+    },
+    "S10A007": {
+      "CONS_NAME": "Hukkeri",
+      "WINNER_2018": "BJP",
+      "WINNER_2013": "BJP",
+      "WINNER_2008": "JD(S)"
+    },
+    "S10A008": {
+      "CONS_NAME": "Arabhavi",
+      "WINNER_2018": "BJP",
+      "WINNER_2013": "BJP",
+      "WINNER_2008": "JD(S)"
+    },
+    "S10A009": {
+      "CONS_NAME": "Gokak",
+      "WINNER_2018": "INC",
+      "WINNER_2013": "INC",
+      "WINNER_2008": "INC"
+    },
+    "S10A010": {
+      "CONS_NAME": "Yemkanmardi",
+      "WINNER_2018": "INC",
+      "WINNER_2013": "INC",
+      "WINNER_2008": "INC"
+    }
+  }
+})
