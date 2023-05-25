@@ -5,6 +5,7 @@ const nextConfig = {
   hostname: "www.news18.com",
   port: "",
   pathname: "/account123/**",
+  reactStrictMode: true,
 };
 
 module.exports = nextConfig;

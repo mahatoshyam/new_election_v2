@@ -1,0 +1,25 @@
+{
+    "components": {
+        "lhs": [
+            {
+                "enable": true,
+                "order": 1,
+                "component": "past_results"
+            },
+            {
+                "enable": true,
+                "order": 2,
+                "component": "candidate_details"
+            }
+        ],
+        "rhs": [
+            
+        ],
+        "center": [
+            
+        ]
+    },
+    "page_key": "{stg}:ae_en_2023_s10_state",
+    "message": "",
+    "execution_time_in_ms": 28
+}

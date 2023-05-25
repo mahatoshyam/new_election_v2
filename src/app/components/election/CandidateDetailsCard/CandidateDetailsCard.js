@@ -1,13 +1,25 @@
 "use client"
 
 import React from "react";
+import useSWR from 'swr'
+import { useState, useEffect } from 'react';
 
 const CandidateDetailsCard = async () => {
+  const [data, setData] = useState(null);
   // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   // await delay(5000);
   const api = "http://localhost:3000/api/candidate-details/cand-details.json";
   let res = await fetch(api);
-  let data = await res.json();
+  res = await res.json();
+  setData(res);
+  /* const api = "http://localhost:3000/api/candidate-details/cand-details.json";
+  const fetcher = (...args) => fetch(api).then(res => res.json())
+  const { data, error, isLoading } = await useSWR('/api/user', fetcher) */
+  
+  // if (error) return <div>failed to load</div>
+  // if (isLoading) return <div>loading...</div>
+
+  console.log("rendering");
   // console.log("da", data1);
 
   return (

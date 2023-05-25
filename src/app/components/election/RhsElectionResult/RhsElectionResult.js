@@ -28,7 +28,7 @@ const RhsElectionResult = async () => {
               return <>Hello</>;
             })} */}
             {data?.cons_results?.map( (row, index) => (
-              <tr>
+              <tr key={index}>
               <th scope="row">{index + 1}</th>
               <td>{row.cons_name}</td>
               <td>{row['2006']}</td>

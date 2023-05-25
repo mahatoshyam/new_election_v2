@@ -12,7 +12,20 @@ import CandidateDetailsCard from "../components/election/CandidateDetailsCard/Ca
 import Pastresultlist from "../components/election/PastResultList/Pastresultlist";
 import Skeleton from "react-loading-skeleton";
 
-const CandidateDetail = () => {
+const CandidateDetail = async () => {
+  const api = "http://localhost:3000/api/candidate-details/order.json";
+  const res = await fetch(api);
+  const data = await res.json();
+
+  let components = {
+    past_results: <CandidateDetailsCard />,
+    candidate_details: <RhsElectionResult />
+  }
+
+  let rhsComponents = data.components.lhs;
+  rhsComponents = rhsComponents.sort( (a,b) => b.order - a.order );
+  // return JSON.stringify(rhsComponents);
+
   return (
     <div className="container">
       <div className="row">
@@ -59,8 +72,11 @@ const CandidateDetail = () => {
         </div>
         <div className="col-3">
           <h3>rhs</h3>
+          {rhsComponents.map( (rhsComponent) => (
+            components[rhsComponent.component]
+          ))}
           {/* <CandidateNavigation/> */}
-          <CandidateDetailsCard />
+          {/* <CandidateDetailsCard />
           <Suspense
             fallback={
               <>
@@ -69,7 +85,7 @@ const CandidateDetail = () => {
             }
           >
             <RhsElectionResult />
-          </Suspense>
+          </Suspense> */}
         </div>
       </div>
     </div>
