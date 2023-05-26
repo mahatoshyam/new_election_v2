@@ -24,7 +24,7 @@ const CandidateDetail = () => {
           <Suspense
             fallback={
               <>
-                <Skeleton />{" "}
+                <Skeleton />
               </>
             }
           >
@@ -60,7 +60,16 @@ const CandidateDetail = () => {
         <div className="col-3">
           <h3>rhs</h3>
           {/* <CandidateNavigation/> */}
-          <CandidateDetailsCard />
+          <Suspense
+            fallback={
+              <>
+                <Skeleton />
+              </>
+            }
+          >
+            <CandidateDetailsCard />
+          </Suspense>
+
           <Suspense
             fallback={
               <>

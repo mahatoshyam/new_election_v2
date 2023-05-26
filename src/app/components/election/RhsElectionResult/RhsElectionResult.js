@@ -27,17 +27,15 @@ const RhsElectionResult = async () => {
               console.log("resss", conname);
               return <>Hello</>;
             })} */}
-            {data?.cons_results?.map( (row, index) => (
-              <tr>
-              <th scope="row">{index + 1}</th>
-              <td>{row.cons_name}</td>
-              <td>{row['2006']}</td>
-              <td>{row['2011']}</td>
-              <td>{row['2016']}</td>
-            </tr>
+            {data?.cons_results?.map((row, index) => (
+              <tr key={index}>
+                <th scope="row">{index + 1}</th>
+                <td>{row.cons_name}</td>
+                <td>{row["2006"]}</td>
+                <td>{row["2011"]}</td>
+                <td>{row["2016"]}</td>
+              </tr>
             ))}
-            
-            
           </tbody>
         </table>
       </div>
